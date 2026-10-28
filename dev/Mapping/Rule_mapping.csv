@@ -1,0 +1,16 @@
+rule_order,rule_set,rule_type,is_active_map,layer,src_name,type_object,object_name,lookup_alias,lookup_arg,lookup_arg_additional,parameter,rule,sql_tx
+0,0,class,1,de-id,,get_hash_condition,<element_name>,,,,,,case when <element_name> is NULL or cast(<element_name> as string) = '' then cast(<element_name> as string) else sha(cast(<element_name>  as string)||'|'||'E4F456E4567C4579') end
+0,0,class,1,de-id,,to_01_flag,<element_name>,,,,,,"case when upper(trim(<element_name>)) in ('YES','Y') then 1 when upper(trim(<element_name>)) in ('NO','N') then 0 else upper(trim(<element_name>)) end"
+0,0,class,1,de-id,,to_upper,<element_name>,,,,,,upper(trim(<element_name>))
+0,0,class,1,de-id,,to_initcap,<element_name>,,,,,,initcap(trim(<element_name>))
+101,0,element,1,de-id,sphub,mx_claim,claim_id,,,,,class:get_hash_condition,
+101,0,element,1,de-id,sphub,mx_claim,provider_id,,,,,class:get_hash_condition,
+101,0,element,1,de-id,sphub,mx_claim,patient_id,,,,,class:get_hash_condition,
+101,0,element,1,de-id,sphub,mx_claim,follow-up_required,,,,,class:to_01_flag,
+101,0,element,1,de-id,sphub,mx_claim,insurance_type,,,,,class:to_upper,
+101,0,element,1,de-id,sphub,mx_claim,claim_status,,,,,class:to_upper,
+101,0,element,1,de-id,sphub,mx_claim,reason_code,,,,,class:to_upper,
+101,0,element,1,de-id,sphub,mx_claim,ar_status,,,,,class:to_upper,
+101,0,element,1,de-id,sphub,mx_claim,outcome,,,,,class:to_upper,
+203,0,element,1,de-id,sphub,provider,provider_id,,,,,class:get_hash_condition,
+303,0,element,1,de-id,sphub,patient,patient_id,,,,,class:get_hash_condition,

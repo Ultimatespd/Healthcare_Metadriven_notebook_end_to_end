@@ -1,0 +1,5 @@
+Expected_column,exp1,exp2,exp3,exp4
+Patient_id,patid,pat_id,patient_id,pid
+provider_id,prid,provider id,pid,pr
+diagnosis_code,drgid,did,d_id,diagnosis code
+procedure_code,procedure code,procd,procedure cd,

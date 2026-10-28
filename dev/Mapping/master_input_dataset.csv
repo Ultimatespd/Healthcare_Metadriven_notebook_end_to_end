@@ -1,0 +1,7 @@
+rule_id,src,src_table,tgt_table,data_source_id,file_extension,derived _table_columns
+1,sphub,claim,mx_claim,SPHUB,.csv,
+2,sphub,claim,diagnosis_code,SPHUB,.csv,diagnosis_code
+3,sphub,claim,patient,SPHUB,.csv,Patient_id
+4,sphub,claim,provider,SPHUB,.csv,provider_id
+5,sphub,claim,procedure_code,SPHUB,.csv,procedure_code
+,,,,,,

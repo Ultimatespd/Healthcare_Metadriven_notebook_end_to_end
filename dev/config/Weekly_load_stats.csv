@@ -1,0 +1,16 @@
+source,layer,table_type,table_name,load_type,enable
+sphub,staging,fact,mx_claim,Full_Load,Y
+sphub,staging,dim,diagnosis_code,Full_Load,Y
+sphub,staging,dim,procedure_code,Full_Load,Y
+sphub,staging,dim,provider,Full_Load,Y
+sphub,staging,dim,patient,Full_Load,Y
+sphub,ingestion,fact,mx_claim,Inc_Load,Y
+sphub,ingestion,dim,diagnosis_code,Full_Load,Y
+sphub,ingestion,dim,procedure_code,Full_Load,Y
+sphub,ingestion,dim,provider,Full_Load,Y
+sphub,ingestion,dim,patient,Full_Load,Y
+sphub,masked,fact,mx_claim,Inc_Load,Y
+sphub,masked,dim,diagnosis_code,Full_Load,Y
+sphub,masked,dim,procedure_code,Full_Load,Y
+sphub,masked,dim,provider,Full_Load,Y
+sphub,masked,dim,patient,Full_Load,Y
